@@ -1,3 +1,12 @@
+package test
+
+import (
+	"compress/flate"
+	"runtime"
+	"sync"
+	"testing"
+)
+
 func BenchmarkPoolGC(b *testing.B) {
 	b.ReportAllocs()
 	var a, z [1000]*flate.Writer
